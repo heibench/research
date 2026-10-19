@@ -1,0 +1,10 @@
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Nothing is generated in this repository. If a future study produces raw run
+# data, it does not land here uninspected: see docs/methodology.md on what is
+# evidence and what is a reconstructible environment.

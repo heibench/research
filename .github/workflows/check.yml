@@ -1,0 +1,32 @@
+name: Check
+
+# Pull requests only. With "require branches to be up to date" on, a run on
+# push to main re-proves the PR run on an identical tree.
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: extractions/setup-just@v4
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - run: just setup
+
+      - run: just check
+
+      - run: just test

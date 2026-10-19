@@ -1,0 +1,24 @@
+# Hook revs are deliberately current rather than copied from dev-toolbox's
+# templates/pre-commit/generic.yaml, which ships gitleaks v8.27.2 and
+# pre-commit-hooks v5.0.0 and has no ecosystem watching it
+# (CameronBrooks11/dev-toolbox#72). Dependabot's pre-commit ecosystem is
+# declared below in .github/dependabot.yml so these do not rot the same way.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        # raw/ is verbatim captured output; reformatting it would make it no
+        # longer verbatim, which is the only property it has.
+        exclude: ^raw/
+      - id: end-of-file-fixer
+        exclude: ^raw/
+      - id: check-yaml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--enforce-all, --maxkb=512]
