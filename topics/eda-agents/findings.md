@@ -190,7 +190,10 @@ reviewers' in the middle of the field (alexchunlin #11, C).
 
 ## 5. Implications for boardwright
 
-**Proposed checks** (not filed; each for review):
+**Proposed checks**, filed on 2026-11-21 against boardwright 0.9.0 as
+boardwright#122 (1), #123 (2), #124 (3), #125 (4) and #126 (6). Item 5 was not
+filed: `check.py` already runs ERC with `--severity-all` and `sch ercdiff`
+compares existing schematics, so label-overlap warnings count.
 
 1. **Decoupler loop length.** Measure the routed length from each declared
    decoupler pad to its own-net via, and fail when the pin is fed through the
@@ -217,7 +220,10 @@ against a plain agent with `kicad-cli` on the same tasks, which is what
 [`../agent-evaluation/methodology.md`](../agent-evaluation/methodology.md) is
 for.
 
-**Proposed skill rules** (boardwright#48), each traced:
+**Proposed skill rules**, each traced. The skill shipped in boardwright 0.9.0
+(#119) and already covers reading the vendor reference, declaring `REVIEW`
+and reporting PASS as less than "works". The rest are filed as
+boardwright#128:
 
 - Before choosing a part, read its datasheet and reference layout, check it is
   active at a distributor, and cite both (A5 to A8, A40; §Headline 3).
