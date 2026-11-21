@@ -128,3 +128,14 @@ decoupling guidance.
 **Remaining E sources** (SNLA187, SLVA959, SLMA002, TUSB2E22 data sheet,
 Kamineni and Bogatin 2026, Olney 2012 and 2022, Jouppi 2009, Fan 2011): see
 capture E's source table, each with document number and URL.
+
+## 4. First-hand field work
+
+**BREAD slice template reviews, 2026-11-19 to 21** — feastorg/Slice_TEMP_NUCL_S4L-r1
+PR #3, Slice_TEMP_NUCL_L4L-r1 PR #4, Slice_TEMP_PICO_L4L-r1 PR #4 and related
+boards; distilled in [`field-report.md`](field-report.md). Established, for one
+project and one reviewer: a series-part column placed before routing gave three
+nets 5, 5 and 4 F.Cu segments, and the same parts placed on routes drawn first
+gave 2, 2 and 2 (edd960f against 3d9827f), with identical DRC results and route
+lint, while the reviewer rejected the first at a glance. Every board passed DRC
+with 0 errors before review, and the reviewer found layout problems on every one.
