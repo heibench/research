@@ -21,6 +21,7 @@ they serve; this repository holds what we found out and what we decided.
 | topic | question |
 | --- | --- |
 | [`agent-evaluation`](topics/agent-evaluation/) | Does giving an agent one of our verification tools produce better work, and at what cost? |
+| [`eda-agents`](topics/eda-agents/) | What separates a good AI-designed circuit board from one that only looks finished, and which differences can a tool check? |
 
 A new topic is a directory with a `README.md` that states its question in a
 form a result could answer, and a status line kept true. Start one when a
