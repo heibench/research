@@ -20,4 +20,4 @@ Captures behind them are the `2026-11-21-eda-agents-*` files in
 
 First pass captured and synthesised 2026-11-21: workstreams A to E, R (Reddit,
 by hand) and V. Proposed boardwright checks and skill rules in `findings.md`
-§5 are not filed.
+§5 are filed as boardwright#122 to #126 and #128.
