@@ -160,3 +160,9 @@ agent that has not seen the others' reasoning.
    costs nothing that shipping the skill does not. Any benchmark cases later
    built from it go where #2 decides.
 3. **Window:** 2025-01-01 to the capture date.
+   *Amended 2026-11-21, after capture:* evidence older than three months is
+   kept but weighted down, because the models changed within the window.
+   `findings.md` §6 says which findings have evidence from after 2026-08-21.
+4. *Added 2026-11-21:* Reddit's API refused a new app and the Chrome
+   extension refuses reddit.com, so R read threads saved by hand from
+   top-of-month searches instead (`findings.md`, opening note).
